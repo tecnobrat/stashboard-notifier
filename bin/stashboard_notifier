@@ -19,7 +19,7 @@ require 'gli'
 require 'stashboard_notifier'
 require 'stashboard'
 
-include GLI
+include GLI::App
 
 version StashboardNotifier::VERSION
 
@@ -157,4 +157,4 @@ def get_stashboard(options)
   Stashboard::Stashboard.new(options[:stashboard], options[:oauth_token], options[:oauth_secret])
 end
 
-exit GLI.run(ARGV)
+exit run(ARGV)
